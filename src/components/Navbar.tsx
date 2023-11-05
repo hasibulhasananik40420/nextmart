@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { usePathname } from "next/navigation";
 import { Heart, ShoppingBagIcon } from 'lucide-react'
 import { signIn,useSession } from 'next-auth/react'
+import MobileMenu from './MobileMenu'
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -13,15 +14,16 @@ const Navbar = () => {
 
 
   return (
-    <div className="w-full h-20 border-b-[1px] border-b-zinc-500 bg-white text-zinc-600 sticky top-0 z-50 bg-white/80 backdrop-blur-2xl">
+    <div className="w-full h-20 border-b-[1px] border-b-zinc-500 bg-white text-zinc-600 sticky top-0 z-50 bg-white/80 backdrop-blur-2xl ">
 
-      <div className='max-w-[1440px] mx-auto h-full flex items-center justify-between px-4 lg:px-4 xl:px-4 2xl:px-0'>
+     <div className='lg:block hidden'>
+     <div className='max-w-[1440px] mx-auto flex items-center justify-between px-4 lg:px-4 xl:px-4 2xl:px-0 h-20'>
         {/* Logo */}
         <Logo />
 
         {/* Navigation */}
 
-        <ul className="hidden md:flex items-center gap-5 text-sm uppercase font-semibold">
+        <ul className="flex items-center gap-5 text-sm uppercase font-semibold">
           {navigation.map((item) => (
             <Link href={item?.href} key={item._id}>
               <li
@@ -87,6 +89,11 @@ const Navbar = () => {
         </div>
 
       </div>
+     </div>
+
+       <div className='2xl:hidden lg:hidden block '>
+         <MobileMenu/>
+       </div>
 
     </div>
   )

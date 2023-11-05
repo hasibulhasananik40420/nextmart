@@ -16,10 +16,10 @@ const Products =async () => {
      <Container>
        <div className='flex flex-col gap-2 items-center'>
         <h1 className='text-3xl font-bold'>Choose a category</h1>
-        <p className='text-lg '>Explore dozens of customized layouts made by our brilliant
+        <p className='text-lg text-center'>Explore dozens of customized layouts made by our brilliant
             designers.</p>
 
-        <div className='text-zinc-500 flex items-center gap-2 md:gap-6 mt-5'>
+        <div className='text-zinc-500 md:flex items-center gap-2 md:gap-6 mt-5'>
         <Link
               href={"/phones"}
               className="flex gap-2 hover:text-black cursor-pointer duration-200"
