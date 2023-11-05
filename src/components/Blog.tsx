@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Blog = () => {
@@ -22,10 +23,14 @@ const Blog = () => {
               <p className="text-sm text-[#636262]">6 mins read</p>
             </div>
           </div>
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/6398109366582969f5e9c1a5_Rectangle%2040049.png" alt="" className="inline-block h-full w-full object-cover" />
+          
+
+          <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/6398109366582969f5e9c1a5_Rectangle%2040049.png'} height={500} width={500} className="inline-block h-full w-full object-cover"  alt=''/>
         </a>
         <a href="#" className="max-[767px]: flex max-w-full grid-cols-1 flex-col gap-4 rounded-md bg-white py-4 font-bold text-black lg:px-2">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63980defd9d4a1fd1cf20a3d_Rectangle%20801.jpg" alt="" className="inline-block h-60 w-full rounded-xl object-cover" />
+         
+
+          <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63980defd9d4a1fd1cf20a3d_Rectangle%20801.jpg'} height={500} width={500} className="inline-block h-60 w-full rounded-xl object-cover"  alt=''/>
           <div className="flex w-full flex-col items-start justify-start py-4">
             <div className="mb-4 rounded-md bg-white py-1.5">
               <p className="text-sm font-semibold text-[#1353fe]">CATEGORY NAME</p>
@@ -35,7 +40,9 @@ const Blog = () => {
           </div>
         </a>
         <a href="#" className="flex max-w-full grid-cols-1 flex-col gap-4 rounded-md bg-white py-4 font-bold text-black lg:px-2">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63980df03e820073f8125fb5_Rectangle%20801-2.jpg" alt="" className="inline-block h-60 w-full rounded-xl object-cover" />
+         
+
+          <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63980df03e820073f8125fb5_Rectangle%20801-2.jpg'} height={500} width={500} className="inline-block h-60 w-full rounded-xl object-cover"  alt=''/>
           <div className="flex w-full flex-col items-start justify-start py-4">
             <div className="mb-4 rounded-md bg-white py-1.5">
               <p className="text-sm font-semibold text-[#1353fe]">CATEGORY NAME</p>
@@ -45,7 +52,11 @@ const Blog = () => {
           </div>
         </a>
         <a href="#" className="flex max-w-full grid-cols-1 flex-col gap-4 rounded-md bg-white py-4 font-bold text-black lg:px-2">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63980df0bd7f152c341ab985_Rectangle%20801-1.jpg" alt="" className="inline-block h-60 w-full rounded-xl object-cover" />
+         
+
+
+          <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63980df0bd7f152c341ab985_Rectangle%20801-1.jpg'} height={500} width={500} className="inline-block h-60 w-full rounded-xl object-cover"  alt=''/>
+
           <div className="flex w-full flex-col items-start justify-start py-4">
             <div className="mb-4 rounded-md bg-white py-1.5">
               <p className="text-sm font-semibold text-[#1353fe]">CATEGORY NAME</p>

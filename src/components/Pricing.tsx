@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image'
 import React from 'react'
 
 const Pricing = () => {
@@ -16,28 +17,23 @@ const Pricing = () => {
     <div className="mx-auto mb-8 grid w-full grid-cols-1 gap-4 rounded-3xl bg-[#f5f8ff] p-8 md:mb-12 md:grid-cols-[1.25fr_0.25fr_0.75fr] md:p-16 lg:mb-16 lg:w-4/5 lg:grid-cols-[1.75fr_0.5fr_0.75fr]">
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
+           <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>
           <p>Premium Designs</p>
         </div>
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
-          <p>Regular updates</p>
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>          <p>Regular updates</p>
         </div>
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
-          <p>Copy &amp; Paste</p>
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>          <p>Copy &amp; Paste</p>
         </div>
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
-          <p>Lifetime Access</p>
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>          <p>Lifetime Access</p>
         </div>
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
-          <p>Early bird price</p>
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>          <p>Early bird price</p>
         </div>
         <div className="flex flex-row items-center">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg" alt="" className="mr-2 inline-block h-4 w-4" />
-          <p>Premium Support</p>
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63915fec5d1aa12f6aedd68c_Vector%20(14).svg'} height={500} width={500} className="mr-2 inline-block h-4 w-4" alt=''/>          <p>Premium Support</p>
         </div>
       </div>
       <div className="border-left-solid mx-auto h-full w-px border"></div>
@@ -49,8 +45,9 @@ const Pricing = () => {
     </div>
     <div className="mx-auto flex w-[90%] max-w-[800px] flex-row items-center">
       <div className="relative mr-4 max-w-[200px]">
-        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/6398071f92a9bd21d7eca18a_Frame%20427322733.svg" alt="" className="relative -left-8 top-0 inline-block" />
-        <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905435069fb009d43abbb1_Ellipse-2.jpg" alt="" className="absolute bottom-10 left-auto right-2 top-auto inline-block h-16 w-16 rounded-full object-cover" />
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/6398071f92a9bd21d7eca18a_Frame%20427322733.svg'} height={500} width={500} className="relative -left-8 top-0 inline-block" alt=''/>
+        {/* <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/63905435069fb009d43abbb1_Ellipse-2.jpg" alt="" className="absolute bottom-10 left-auto right-2 top-auto inline-block h-16 w-16 rounded-full object-cover" /> */}
+        <Image src={'https://assets.website-files.com/63904f663019b0d8edf8d57c/63905435069fb009d43abbb1_Ellipse-2.jpg'} height={500} width={500} className="absolute bottom-10 left-auto right-2 top-auto inline-block h-16 w-16 rounded-full object-cover" alt=''/>
       </div>
       <div className="flex max-w-[560px] flex-col items-start text-left">
         <p className="mb-4 text-[#636262]">“Lorem ipsum dolor sit amet, &nbsp;elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis"</p>
