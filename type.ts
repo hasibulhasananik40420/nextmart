@@ -9,4 +9,7 @@ export interface ProductType {
     brand: string;
     category: string;
     quantity: number;
+
   }
+
+  //18 mint
