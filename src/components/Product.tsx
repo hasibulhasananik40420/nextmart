@@ -1,19 +1,25 @@
 "use client"
 import React from 'react'
-import { ProductType } from '../../type'
+import { ProductType, StateProps } from '../../type'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Heart } from 'lucide-react'
 import FormattedPrice from './FormattedPrice'
-import {  useDispatch } from 'react-redux'
-import { addToCart } from '@/redux/proSlice'
-
+import {  useDispatch, useSelector } from 'react-redux'
+import { addToCart, addToFavorite } from '@/redux/proSlice'
+import toast, { Toaster } from 'react-hot-toast';
 
 interface Item {
   products: ProductType[]
 }
 
 const Product = ({ products }: Item) => {
+  const {productData,favoriteData} = useSelector((state:StateProps)=> state.pro)
+
+   const isFavorite = (productData:any)=>{
+      return favoriteData.some((favoriteItem)=> favoriteItem._id === productData)
+   }
+
 
   const dispatch = useDispatch()
 
@@ -25,10 +31,21 @@ const Product = ({ products }: Item) => {
             <Link href={{pathname:`/${item?._id}`, query:{_id:item?._id}}}>
               <Image src={item.image} height={500} width={500} alt='' className='w-full h-80 object-contain lg:object-cover group-hover:scale-105 duration-300' />
             </Link>
+
+
+            
             <Heart
-              fill="black"
-              className="absolute top-4 right-4 text-zinc-500 w-5 h-5 hover:text-black cursor-pointer duration-200"
-            />
+            fill={isFavorite(item._id) ? "red" : "black"}
+            onClick={() => {
+              dispatch(addToFavorite(item));
+              if (isFavorite(item?._id)) {
+                toast.error(`${item.title} removed from favorites!`);
+              } else {
+                toast.success(`${item.title} added to favorites!`);
+              }
+            }}
+            className="absolute top-4 right-4 text-zinc-500 w-5 h-5 hover:text-black cursor-pointer duration-200"
+          />
 
             <div className="p-4 bg-zinc-100 group-hover:bg-zinc-50 group-hover:shadow-xl duration-300">
               <p className="group-hover:text-designColor duration-300">
@@ -40,7 +57,7 @@ const Product = ({ products }: Item) => {
               </p>
 
               <div className="flex items-center justify-between text-sm mt-2">
-              <button onClick={()=>dispatch(addToCart(item))} className="uppercase font-semibold hover:text-designColor duration-300">
+              <button onClick={()=>{dispatch(addToCart(item)), toast.success(`${item?.title} is added to Cart`)}} className="uppercase font-semibold hover:text-designColor duration-300">
                 Add to cart
               </button>
               <Link
@@ -57,6 +74,17 @@ const Product = ({ products }: Item) => {
           </div>
         ))
       }
+      <Toaster
+  position="top-right"
+  toastOptions={{
+    style:{
+      background:'',
+      color:''
+  
+  }
+  }}
+  reverseOrder={false}
+/>
     </div>
   )
 }

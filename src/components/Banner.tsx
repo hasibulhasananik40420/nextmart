@@ -53,6 +53,8 @@ const Banner = () => {
               color: "white",
               background: "#fff",
               cursor: "pointer",
+          
+              
             }
             : {
               width: "50px",
@@ -69,9 +71,9 @@ const Banner = () => {
     ),
   };
   return (
-    <div className="lg:min-h-screen relative">
+    <div className="lg:min-h-screen relative ">
       <Slider {...settings}>
-        <div className="w-full py-32 lg:py-0 lg:h-screen bg-slate-200 relative">
+        <div className="w-full py-32 mb-20 lg:mb-0 lg:py-0 lg:h-screen bg-yellow-100 relative">
           <div className="w-full lg:w-1/3 hidden lg:inline-block h-full bg-designColor z-0 relative">
             <Image
               src={sliderOne}
@@ -82,7 +84,7 @@ const Banner = () => {
           </div>
           <div className="lg:absolute lg:top-1/2 lg:left-2/3 transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col items-center gap-5">
             <p className="text-xl uppercase">Get the Best products for you</p>
-            <p className="w-96 text-center text-zinc-600">
+            <p className="md:w-96 w-full text-center text-zinc-600">
               Browse the latest phones in the Market and get the one you dreamt
               for
             </p>
@@ -92,6 +94,11 @@ const Banner = () => {
             </button>
           </div>
         </div>
+
+
+
+
+
         <div className="w-full py-32 lg:py-0 lg:h-screen bg-slate-200 relative">
           <div className="w-full lg:w-1/3 hidden lg:inline-block h-full bg-[#fcb900] z-0 relative">
             <Image
@@ -103,7 +110,7 @@ const Banner = () => {
           </div>
           <div className="lg:absolute lg:top-1/2 lg:left-2/3 transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col items-center gap-5">
             <p className="text-xl uppercase">Get the Best products for you</p>
-            <p className="w-96 text-center text-zinc-600">
+            <p className="md:w-96 w-full text-center text-zinc-600">
               Browse the latest t-shirt in the Market and get the one you dreamt
               for
             </p>
@@ -124,7 +131,7 @@ const Banner = () => {
           </div>
           <div className="lg:absolute lg:top-1/2 lg:left-2/3 transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col items-center gap-5">
             <p className="text-xl uppercase">Get the Best products for you</p>
-            <p className="w-96 text-center text-zinc-600">
+            <p className="md:w-96 w-full text-center text-zinc-600">
               Browse the latest t-shirt in the Market and get the one you dreamt
               for
             </p>

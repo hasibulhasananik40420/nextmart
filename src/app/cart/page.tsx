@@ -1,3 +1,4 @@
+import Cart from '@/components/Cart'
 import Container from '@/components/Container'
 import Title from '@/components/Title'
 
@@ -7,6 +8,7 @@ const page = () => {
   return (
     <Container>
          <Title title='Your Cart'/>
+          <Cart/>
     </Container>
   )
 }

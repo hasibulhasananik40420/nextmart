@@ -12,7 +12,7 @@ const Products =async () => {
   
 
   return (
-    <div className='mt-10'>
+    <div className='lg:mt-10 mt-[-50px]'>
      <Container>
        <div className='flex flex-col gap-2 items-center'>
         <h1 className='text-3xl font-bold'>Choose a category</h1>
